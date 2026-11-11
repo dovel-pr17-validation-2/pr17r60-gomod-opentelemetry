@@ -1,0 +1,10 @@
+structname: "{{.InterfaceName}}"
+filename: "{{.InterfaceName | snakecase }}.go"
+pkgname: "mocks"
+dir: "{{.InterfaceDirRelative}}/mocks"
+template: testify
+
+packages:
+  "flamingo.me/opentelemetry":
+    interfaces:
+      Shutdowner:
